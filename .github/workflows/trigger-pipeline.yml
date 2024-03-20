@@ -1,0 +1,13 @@
+name: Pipelines Demo
+on: [push]
+jobs:
+  Trigger-Reimage-Pipeline:
+    environment: gh-action-demo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reimage Pipeline Trigger
+        run: |
+          curl https://api.dev.cycle.io/v1/pipelines/6571f33aaff7e78b98bb25aa/trigger \
+            -H "Content-Type: application/json" \
+            -d '{ "secret": "secret_mEIhtK2EeffH6n0v2MAawzswGDrGpsrsupwhSB34I4vtnH0aJa0mfPbp8B7N" }' \
+            -X POST
