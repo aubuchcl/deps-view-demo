@@ -8,7 +8,7 @@ function App() {
         <img src="https://static.cycle.io/icons/logo/logo-white.svg" className="App-logo" alt="logo"  width="400px" height="100px" />
         <p>Deployment Version:  </p>
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          {process.env.CONTAINER_DEPLOYMENT_VERSION}
+          {process.env.REACT_APP_CONTAINER_DEPLOYMENT_VERSION}
         </a>
       </header>
     </div>
